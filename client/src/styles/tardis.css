@@ -1,0 +1,85 @@
+.page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.page::before {
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+    transition: background-image 0.4s ease;
+}
+
+.page .tardis-visible img {
+    height: 70vh;
+}
+
+.page .tardis-visible {
+    opacity: 0;
+    animation: blink 12s linear infinite;
+}
+
+.future.page::before {
+    background-image: url("../../public/future.jpg");
+}
+.past.page::before {
+    background-image: url("../../public/past.jpg");
+}
+.present.page::before {
+    background-image: url("../../public/present.jpg");
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.4;
+    }
+    10% {
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.8;
+    }
+    20% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 0.8;
+    }
+    40% {
+        opacity: 0;
+    }
+    45% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0;
+    }
+    55% {
+        opacity: 0.2;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
