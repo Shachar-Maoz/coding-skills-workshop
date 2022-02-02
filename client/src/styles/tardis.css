@@ -40,46 +40,28 @@
 }
 
 @keyframes blink {
-    0% {
+    0%,
+    10%,
+    20%,
+    40%,
+    50%,
+    60%,
+    100% {
         opacity: 0;
     }
-    5% {
-        opacity: 0.4;
-    }
-    10% {
-        opacity: 0;
-    }
-    15% {
-        opacity: 0.8;
-    }
-    20% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 1;
-    }
-    30% {
-        opacity: 1;
-    }
-    35% {
-        opacity: 0.8;
-    }
-    40% {
-        opacity: 0;
-    }
+    5%,
     45% {
         opacity: 0.4;
     }
-    50% {
-        opacity: 0;
+    15%,
+    35% {
+        opacity: 0.8;
+    }
+    25%,
+    30% {
+        opacity: 1;
     }
     55% {
         opacity: 0.2;
-    }
-    60% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
     }
 }
