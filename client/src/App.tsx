@@ -3,6 +3,7 @@ import SortingHat from './components/SortingHat';
 import './App.css';
 import { Tardis } from './components/Tardis';
 import SWC from './components/SWC';
+import { Avengers } from './components/Avengers';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       {/* <SortingHat /> */}
       {/* <Tardis/> */}
       {/* <SWC /> */}
+      <Avengers />
     </div>
   );
 }
