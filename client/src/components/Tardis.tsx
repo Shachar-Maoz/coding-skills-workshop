@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useEffect } from 'react';
 import '../styles/tardis.css';
 
-// !IMPORTANT אם לא זיהיתם את הרפרנס, לכו לראות דוקטור הו 
+// !IMPORTANT אם לא זיהיתם את הרפרנס, תראו דוקטור הו 
 export const Tardis = () => {
     const [year, setYear] = useState<number>(new Date().getFullYear());
     const [yearsList, setYearsList] = useState<number[]>([]);
