@@ -27,6 +27,7 @@ export default function First() {
         if (favoriteColor === "blue") setResult("התקבלת לרייבנקלו! 🦅");
         if (favoriteColor === "green") setResult("התקבלת לסלית'רין! 🐍");
         if (favoriteColor === "yellow") setResult("התקבלת להפלפאף! 🦡")
+        setResult("חבל, אתם מוגלגים... 😞")
     }
 
     return (

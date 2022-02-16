@@ -17,12 +17,12 @@ export const Avengers/* : React.FC<AvengersProps>  */ = ({ }) => {
 
 
     const onClick = (index: number) => {
-        const currentAvengerIsChecked = (avengersArray?.find(x => x.name === AvengersInfo[index].name) || null)?.picked
+        const currentAvengerIsChecked = (avengersArray?.find(x => x.name === AvengersInfo[index].name)) || null
         if (typeof currentAvengerIsChecked !== 'object') {
             setAvengersArray(prev => {
                 return [...prev, { name: AvengersInfo[index].name, picked: true }]
             })
-        } else {
+        } else if (currentAvengerIsChecked?.picked) {
             setAvengersArray(prev => {
                 const i = prev.findIndex(av => av.name === AvengersInfo[index].name)
                 const newArr = prev.splice(i, 1)
@@ -34,8 +34,8 @@ export const Avengers/* : React.FC<AvengersProps>  */ = ({ }) => {
     const afterTheSnap = () => {
         // if (hadSnap) {
         if (avengersArray && avengersArray.length > 0) {
-            const died1 = AvengersInfo.filter(c => c.died)
-            const died2 = avengersArray.filter(c => c?.picked)
+            const died1: Array<{ name: string, died: boolean }> = AvengersInfo.filter(c => c.died)
+            const died2: Array<{ name: string, picked: boolean }> = avengersArray.filter(c => c?.picked)
 
             if (died1.length === died2.length) {
                 let found = true
@@ -73,15 +73,11 @@ export const Avengers/* : React.FC<AvengersProps>  */ = ({ }) => {
                 {AvengersInfo.map((av, index) =>
                     <div style={{ display: 'flex', direction: 'ltr' }}>
                         <input type="checkbox" checked={avengersArray.find(x => x.name === av.name)?.picked} onChange={() => onClick(index)} />
-                        <label >{av.name}</label>
+                        <label>{av.name}</label>
                     </div>
                 )}
 
             </div>
-        </div>);
+        </div>
+    );
 };
-
-
-// export const Avengers = () => {
-//   return <div></div>;
-// };

@@ -19,11 +19,6 @@ export const Tardis = () => {
         }, 12000)
     }, []);
 
-    useEffect(() => {
-        console.log("LIST CHANGED!", yearsList);
-    }, [yearsList]);
-
-
     const generateYear = () => {
         return Math.floor(Math.random() * 10000)
     }
